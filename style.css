@@ -1,0 +1,368 @@
+/**
+* Theme Name: WPbooks
+* Theme URI: http://www.tangsan520.com
+* Description: 唐家三少作品集
+* Author URI: http://www.tangsan520.com
+* Version: 1.0
+* Tags: 唐家三少
+**/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: "Microsoft Yahei", Arial;
+}
+
+body {
+	background: #ebebeb; /*#C7EDCC*/
+	font-size: 14px;   /* 菜单必要样式 */
+}
+
+header {
+	background-image: url(images/44e1c4e50d55159c65da6a41bc07e.jpg);
+	color: #ffffff;
+	height: 150px;
+}
+
+.main-header .main-title {
+	font-size: 32px; 
+	font-weight: bold;
+	text-align: center;
+	padding-top: 40px;
+}
+
+article {
+	/*margin-bottom: 50px;*/
+}
+
+/* 首页图片样式CSS Start */
+article img {
+	width: 210px;
+	height: 280px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	margin-top: 2%; 
+}
+
+ul.gallery {
+	margin: 0;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	list-style: none;
+	padding:5px;
+}
+
+ul.gallery li {
+	border:5px solid #fff;
+	position: relative;
+	display:inline-block;
+	width: 210px;
+	height: 280px;
+	margin: 10px 15px;
+	background: #fff;
+	-webkit-box-shadow: 0 1px 4px #ccc, 0 0 40px #ccc inset;
+	-moz-box-shadow: 0 1px 4px #ccc, 0 0 40px #ccc inset; 
+	box-shadow: 0 1px 4px #ccc, 0 0 40px #ccc inset;
+}
+
+ul.gallery li:before,
+ul.gallery li:after {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width: 70%;
+	height: 55%;
+	-webkit-box-shadow: 0 15px 16px #6b6b6b;
+	-moz-box-shadow: 0 15px 16px #6b6b6b;
+	box-shadow: 0 15px 16px #6b6b6b;
+	-webkit-transform: skew(-15deg) rotate(-6deg);
+	-moz-transform: skew(-15deg) rotate(-6deg);
+	-ms-transform: skew(-15deg) rotate(-6deg);
+	-o-transform: skew(-15deg) rotate(-6deg);
+	transform: skew(-15deg) rotate(-6deg); 
+}
+
+ul.gallery li:after {
+	left: auto;
+	right: 11px;
+	-webkit-transform: skew(15deg) rotate(6deg);
+	-moz-transform: skew(15deg) rotate(6deg);
+	-ms-transform: skew(15deg) rotate(6deg);
+	-o-transform: skew(15deg) rotate(6deg);
+	transform: skew(15deg) rotate(6deg); 
+}
+
+a.gallery_links img {
+	border:none;
+}
+
+a.gallery_links {
+	position: relative;
+	text-decoration: none;
+}
+ 
+a.gallery_links:after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 0%;
+	top;
+	left: 0;
+	background: #111;
+	padding: 5px 15px;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 0px 0px 1px #000;
+	white-space: nowrap;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition   : all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	width:85;
+}
+  
+a.gallery_links:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition   : all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	opacity: 0;
+	left: 30%;
+	bottom: 90%;
+}
+
+a.gallery_links:hover:after {
+	bottom: 100%;
+}
+  
+a.gallery_links:hover:before {
+	bottom: 70%;
+}
+
+a.gallery_links:hover:after, a.gallery_links:hover:before {
+	opacity: 1;
+}
+
+.htmleaf-container {
+	margin: 0 auto;
+	text-align: center;
+}
+/* 首页样式CSS End */
+
+/* 目录页 Start */
+
+.category {
+	color: #4F4F4F;
+	width: 80%;
+	margin: 30px auto;
+}
+
+.cat-info {
+	background-color: #E0E0E0;
+	margin-bottom: 30px;
+}
+
+@media screen and (min-width: 800px){
+	.cat-info {
+		min-height: 340px;
+	}
+}
+	.cat-info-img {
+		height: 280px;
+		width: 210px;
+		margin: 30px;
+		display: inline-block;
+		float: left;
+	}
+	.cat-info-info {
+		padding: 30px 30px 0 0;
+	}
+
+@media screen and (max-width: 800px){
+	.cat-info-img {
+		display: none;
+	}
+	.cat-info-info {
+		padding: 20px;
+	}
+}
+
+.cat-info-info h1 {
+	text-align: center;
+	margin: 0 0 10px 0;
+	font-size: 26px;
+}
+
+.cat-info-info p {
+	text-indent: 2em;
+	line-height: 200%;
+}
+
+.category ul {
+	padding: 20px 0 20px 0;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.category ul li {
+	float: left;
+	width: 33.33333%;
+	list-style-type: none;
+	text-indent: 20px;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dashed #ccc;
+}
+
+@media screen and (max-width: 1000px) {
+	.category ul li {
+		float: left;
+		width: 50%;
+		list-style-type: none;
+		text-indent: 20px;
+		height: 30px;
+		line-height: 30px;
+		border-bottom: 1px dashed #ccc;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.category ul li {
+		width: 100%;
+	}
+}
+
+.cat-ul {
+	width: 100%;
+	clear: both;
+	background-color: #E0E0E0;
+}
+
+.category ul li a {
+	text-decoration: none;
+	color: #4F4F4F;;
+}
+
+/* 目录页 End */
+
+/* 阅读页 Start */
+
+.content {
+	width: 80%;
+	margin: 30px auto;
+	background-color: #E0E0E0;
+}
+
+.content_margin {
+	margin: 0 30px;
+	padding: 30px 0;
+}
+
+.content_margin h1 {
+	margin-bottom: 10px;
+	text-indent: 32px;
+}
+
+.content_author,
+.content_size,
+.content_date {
+	padding-right: 10px;
+	font-size: 16px;
+}
+
+.content_author {
+	padding-left: 32px;
+}
+
+.read {
+	padding: 20px 0 30px 0;
+	text-indent: 2em;
+	font-size: 20px;
+}
+
+.read p {
+	font-size: 20px;
+	line-height: 200%;
+	margin-bottom: 20px;
+}
+
+.link {
+	width: 99%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.link a {
+	padding: 10px 5%;
+	border: 1px solid #ccc;
+}
+
+/* 阅读页 End */
+
+footer {
+	clear: both;
+	background-image: url(images/44e1c4e50d55159c65da6a41bc07e.jpg);
+	font-size: 16px;
+	color: #ffffff;
+	width: 100%;
+	height: 70px;
+	padding: 30px 0 40px 0;
+}
+
+footer a, footer a:link, footer a:hover, footer a:visited {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.footer_link {
+	padding-left: 50px;
+	font-size: 14px;
+}
+
+.footer_cr {
+	text-align: center;
+}
+
+/* 404 Start*/
+.e404 {
+	text-align: center;
+	padding: 40px 0 60px;
+	font-size: 16px;
+}
+.e404 img {
+	max-width: 100%;
+}
+.e404 h1 {
+	font-size: 60px;
+	margin: 50px 0 20px;
+}
+/* 404 End*/
+
+/* AD Style Start */
+.index_top_ad {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.index_footer_ad {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.cat_middle_ad {
+	text-align: center;
+	margin-bottom: 30px;
+}
+/* AD Style End */
